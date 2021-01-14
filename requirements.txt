@@ -1,0 +1,5 @@
+selenium==3.14.0
+pytest
+pytest-xdist==1.22.5
+jproperties
+allure-pytest
