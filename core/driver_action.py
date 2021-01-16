@@ -55,10 +55,6 @@ class DriverAction:
     def go_to_web(self, web):
         self.driver.get(web)
 
-    def switch_window(self, i=1):
-        self.wait(lambda: len(self.driver.wrapped_driver.window_handles) > i)
-        self.driver.wrapped_driver.switch_to.window(self.driver.wrapped_driver.window_handles[i])
-
     def wait_field(self, xpath):
         def wait_element():
             self.driver.find_element_by_xpath(xpath)

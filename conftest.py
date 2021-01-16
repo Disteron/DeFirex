@@ -9,7 +9,7 @@ from selenium import webdriver
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 from core.logger_listener import LoggedListener
 
-PROJECT_ROOT = os.path.dirname(__file__)  # /Users/oleg/PycharmProjects/FW
+PROJECT_ROOT = os.path.dirname(__file__)
 
 CHROME_DRIVER_DICT = {'linux': os.path.join(PROJECT_ROOT, 'webdrivers/chrome/chromedriver_lin'),
                       'darwin': os.path.join(PROJECT_ROOT, 'webdrivers/chrome/chromedriver_mac'),
@@ -50,10 +50,6 @@ def start_browser():
         driver.maximize_window()
     else:
         driver = webdriver.Chrome(executable_path=CHROME_DRIVER_DICT[sys.platform], options=options)
-
-    listener = LoggedListener()
-
-    driver = EventFiringWebDriver(driver=driver, event_listener=listener)
 
     yield driver
 
