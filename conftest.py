@@ -1,13 +1,13 @@
 import os
 import sys
 import allure
-
 from jproperties import Properties
+
+
 from allure_commons.types import AttachmentType
 from pytest import fixture
 from selenium import webdriver
-from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
-from core.logger_listener import LoggedListener
+
 
 PROJECT_ROOT = os.path.dirname(__file__)
 

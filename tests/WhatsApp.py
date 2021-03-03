@@ -1,4 +1,3 @@
-
 from core.driver_action import DriverAction
 
 WEB_NAME = 'https://defirex.org/'
