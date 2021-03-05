@@ -57,7 +57,7 @@ def test(start_browser):
 
     for i in range(12):
 
-        text = driverObject.ab(xpath='//span[@class="qtext"]')
+        text = driverObject.add_text(xpath='//span[@class="qtext"]')
         if text == "От чего зависит производительность компьютера?":
             driverObject.click_button(xpath=get_xpath("От частоты процессора"))
         elif text == 'Что такое "браузер"?':
