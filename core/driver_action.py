@@ -60,3 +60,14 @@ class DriverAction:
             self.driver.find_element_by_xpath(xpath)
 
         self.wait(method=wait_element)
+
+    def frame_switch(self, xpath):
+        self.driver.switch_to.frame(self.driver.find_element_by_xpath(xpath))
+
+    def default_content(self):
+        self.driver.switch_to.default_content()
+
+    def ab(self, xpath):
+        text = self.driver.find_element_by_xpath(xpath).text
+        return text
+
