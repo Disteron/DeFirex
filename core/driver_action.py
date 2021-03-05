@@ -67,7 +67,7 @@ class DriverAction:
     def default_content(self):
         self.driver.switch_to.default_content()
 
-    def ab(self, xpath):
+    def add_text(self, xpath):
         text = self.driver.find_element_by_xpath(xpath).text
         return text
 
